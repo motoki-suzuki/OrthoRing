@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use OrthoRing in your research, please cite this software and the associated methodology paper."
+type: software
+title: "OrthoRing: A Python Package for Black-Hole Ringdown Analysis with Orthonormal Modes"
+authors:
+  - family-names: Suzuki
+    given-names: Motoki
+repository-code: "https://github.com/motoki-suzuki/OrthoRing"
+license: MIT
