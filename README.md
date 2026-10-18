@@ -118,15 +118,13 @@ OrthoRing/
 │       ├── likelihood.py
 │       ├── kerrqnms.py
 │       └── KerrQNMEFs-2/
-├── examples/
-└── tests/
+└── examples/
 ```
 
 - `likelihood.py`: Likelihood evaluation, orthonormalization, Bayesian inference, coefficient sampling, and waveform reconstruction.
 - `kerrqnms.py`: Interpolation of Kerr QNM frequencies and excitation factors.
 - `KerrQNMEFs-2/`: Tabulated Kerr QNM data obtained from the external dataset described below.
 - `examples/`: Example analysis scripts.
-- `tests/`: Tests for the package.
 
 ## Kerr QNM Data
 
