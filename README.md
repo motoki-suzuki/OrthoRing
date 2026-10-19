@@ -8,6 +8,7 @@ OrthoRing is based on the method developed in:
 
 S. Morisaki, H. Motohashi, M. Suzuki, and D. Watarai, *Analyzing black-hole ringdowns with orthonormal modes*, [Phys. Rev. D **112**, 124083 (2025)](https://journals.aps.org/prd/abstract/10.1103/lhkp-w6hm), [arXiv:2507.12376 [gr-qc]](http://arxiv.org/abs/2507.12376).
 
+
 ## Features
 
 - **Orthonormalized templates:** Construct orthonormal damped-sinusoid templates using the Gram–Schmidt procedure.
@@ -17,23 +18,35 @@ S. Morisaki, H. Motohashi, M. Suzuki, and D. Watarai, *Analyzing black-hole ring
 - **Posterior reconstruction:** Recover marginalized mode coefficients, transform between orthonormal and nonorthogonal bases, and reconstruct the corresponding waveforms.
 - **Multiple detectors:** Analyze ringdown signals from a network of gravitational-wave detectors using time-domain noise covariance matrices.
 
+
 ## Installation
 
-Clone the repository and install OrthoRing:
+OrthoRing requires Python 3.10 or later and depends on `numpy`, `scipy`, `bilby`, `lalsuite`, and `tqdm`.
+
+OrthoRing is available on [PyPI](https://pypi.org/project/orthoring/) and can be installed using `pip`:
+
+```bash
+pip install orthoring
+```
+
+For the latest development version, you can install directly from [GitHub](https://github.com/motoki-suzuki/OrthoRing):
+
+```bash
+pip install git+https://github.com/motoki-suzuki/OrthoRing.git
+```
+
+
+### Complete Environment
+
+A Conda environment can be created using the `environment.yml` file included in this repository:
 
 ```bash
 git clone https://github.com/motoki-suzuki/OrthoRing.git
 cd OrthoRing
-python -m pip install .
+conda env create -f environment.yml
+conda activate orthoring
 ```
 
-For development, use an editable installation:
-
-```bash
-python -m pip install -e .
-```
-
-OrthoRing requires Python 3.10 or later and depends on NumPy, SciPy, Bilby, LALSuite, and tqdm.
 
 ## Usage
 
@@ -41,6 +54,7 @@ OrthoRing supports two frequency models:
 
 - `KerrFrequencyModel`: QNM frequencies and damping rates determined by the remnant black-hole mass and spin.
 - `AgnosticFrequencyModel`: Frequencies and damping rates treated as independent parameters without assuming the Kerr QNM spectrum.
+
 
 ### Kerr QNM Model
 
@@ -61,6 +75,7 @@ frequencies, damping_rates = model.get_frequencies(parameters)
 print("Frequencies [Hz]:", frequencies)
 print("Damping rates [Hz]:", damping_rates)
 ```
+
 
 ### Agnostic Model
 
@@ -91,9 +106,11 @@ print("Damping rates [Hz]:", damping_rates)
 
 The `hierarchy` argument specifies the ordering condition imposed on the modes: `"f"` for decreasing frequencies or `"g"` for increasing damping rates.
 
+
 ### Bayesian Inference
 
 The `Likelihood` class implements time-domain ringdown likelihoods compatible with Bilby.
+
 
 ```python
 from orthoring import Likelihood
@@ -103,6 +120,7 @@ Both explicit coefficient sampling and analytic marginalization over orthonormal
 
 - `marginalized=True`: Perform orthonormal analysis with analytic marginalization over the mode coefficients.
 - `marginalized=False`: Perform conventional nonorthogonal analysis by jointly sampling the mode amplitudes, phases along with the remnant mass and spin for the Kerr model, or frequencies and damping rates for the agnostic model.
+
 
 ## Repository Structure
 
@@ -126,6 +144,7 @@ OrthoRing/
 - `KerrQNMEFs-2/`: Tabulated Kerr QNM data obtained from the external dataset described below.
 - `examples/`: Example analysis scripts.
 
+
 ## Kerr QNM Data
 
 OrthoRing includes tabulated Kerr QNM frequencies and excitation factors computed by Hayato Motohashi.
@@ -138,6 +157,7 @@ Users of these data should cite the original dataset and its associated publicat
 - H. Motohashi, *Resonant Excitation of Quasinormal Modes of Black Holes*, [Phys. Rev. Lett. **134**, 141401 (2025)](https://doi.org/10.1103/PhysRevLett.134.141401), [arXiv:2407.15191 [gr-qc]](http://arxiv.org/abs/2407.15191).
 
 See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for details.
+
 
 ## Citation
 
@@ -152,6 +172,7 @@ For applications to the ringdown of GW250114, see also:
 <!-- For applications to QNMs near avoided crossings, see also:
 
 - M. Suzuki, K. Kubota, S. Morisaki, H. Motohashi, and D. Watarai, *TBD*. -->
+
 
 ## License
 
