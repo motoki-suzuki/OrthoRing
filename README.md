@@ -163,11 +163,11 @@ See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for details.
 
 If you use OrthoRing in your research, please cite:
 
-- S. Morisaki, H. Motohashi, M. Suzuki, and D. Watarai, *Analyzing black-hole ringdowns with orthonormal modes*, [**Phys. Rev. D 112**, 124083 (2025)](https://journals.aps.org/prd/abstract/10.1103/lhkp-w6hm), [arXiv:2507.12376 [gr-qc]](http://arxiv.org/abs/2507.12376).
+- S. Morisaki, H. Motohashi, M. Suzuki, and D. Watarai, *Analyzing black-hole ringdowns with orthonormal modes*, [Phys. Rev. D **112**, 124083 (2025)](https://journals.aps.org/prd/abstract/10.1103/lhkp-w6hm), [arXiv:2507.12376 [gr-qc]](http://arxiv.org/abs/2507.12376).
 
 For applications to the ringdown of GW250114, see also:
 
-- M. Suzuki, K. Kubota, S. Morisaki, H. Motohashi, and D. Watarai, *Ringdown analysis of GW250114 with orthonormal modes*, [**Phys. Rev. D 114**, 044099 (2026)](https://journals.aps.org/prd/abstract/10.1103/6x5z-q9ml), [arXiv:2605.03576 [gr-qc]](http://arxiv.org/abs/2605.03576).
+- M. Suzuki, K. Kubota, S. Morisaki, H. Motohashi, and D. Watarai, *Ringdown analysis of GW250114 with orthonormal modes*, [Phys. Rev. D **114**, 044099 (2026)](https://journals.aps.org/prd/abstract/10.1103/6x5z-q9ml), [arXiv:2605.03576 [gr-qc]](http://arxiv.org/abs/2605.03576).
 
 <!-- For applications to QNMs near avoided crossings, see also:
 
